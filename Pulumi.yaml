@@ -1,0 +1,14 @@
+name: example-pulumi-team-rbac
+description: Example Pulumi Cloud team RBAC bootstrap with a tag-conditional custom role.
+runtime:
+  name: python
+  options:
+    toolchain: poetry
+
+config:
+  teamName:
+    type: string
+    description: |
+      The pulumi team to create / manage. Also used as the ESC project
+      namespace, so environments land at `<teamName>/<env>`.
+    default: billing
