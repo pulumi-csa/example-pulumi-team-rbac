@@ -1,0 +1,17 @@
+[project]
+name = "example-pulumi-team-rbac"
+version = "0.1.0"
+description = "Example Pulumi Cloud team RBAC bootstrap with a tag-conditional custom role."
+authors = [{ name = "ckoning", email = "ckoning@pulumi.com" }]
+requires-python = ">=3.10,<4.0"
+dependencies = [
+  "pulumi (>=3.246.0,<4.0.0)",
+  "pulumi-pulumiservice (>=1.2.1,<2.0.0)",
+]
+
+[tool.poetry]
+package-mode = false
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
