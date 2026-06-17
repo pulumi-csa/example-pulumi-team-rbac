@@ -1,0 +1,14 @@
+{
+  // Format Python files with ruff on save, and apply ruff's safe
+  // lint fixes + import-sort at the same time. Scoped to `[python]`
+  // so non-Python files keep using whichever formatter the user has
+  // configured for their other languages.
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    }
+  }
+}

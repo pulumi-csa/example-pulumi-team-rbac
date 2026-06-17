@@ -1,0 +1,36 @@
+# EditorConfig — https://editorconfig.org
+# Stops here so the project root is unambiguous.
+root = true
+
+# Defaults for every file.
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+# Python — matches ruff's defaults (line-length 88, indent-width 4),
+# which also align with black. Drop to 79 for strict PEP 8.
+[*.py]
+indent_size = 4
+max_line_length = 88
+
+# Structured config — 2-space indent reads better in nested trees.
+[*.{yaml,yml,toml,json}]
+indent_size = 2
+
+# Shell scripts — 2-space indent is the prevailing convention; 4 is
+# fine if you prefer it. ShellCheck doesn't care either way.
+[*.sh]
+indent_size = 2
+
+# Markdown — two trailing spaces are a hard line break in CommonMark,
+# so don't strip them.
+[*.md]
+trim_trailing_whitespace = false
+
+# Makefiles require literal tabs in recipe lines.
+[Makefile]
+indent_style = tab

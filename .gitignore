@@ -1,0 +1,100 @@
+# Python bytecode and bundles
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Packaging / build artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+
+# Test / coverage / type-checker / linter caches
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.pyre/
+.pytype/
+.ruff_cache/
+
+# In-tree virtual environments. Poetry typically caches venvs under
+# ~/.cache/pypoetry/virtualenvs, but ignore local ones in case the user
+# configures `virtualenvs.in-project = true`.
+venv/
+.venv/
+env/
+ENV/
+
+# Pulumi local state and plugin cache. Stack-settings files like
+# `Pulumi.<stack>.yaml` ARE meant to be committed — do not ignore them.
+.pulumi/
+
+# Secrets — never commit. Allow an example template if you keep one.
+.env
+.env.*
+!.env.example
+
+# Editor / IDE
+# Ignore personal VS Code state, but commit the team-shared
+# settings.json (ruff format-on-save) and extensions.json (recommended
+# installs). Add other shared files (launch.json, tasks.json) with
+# additional `!` carve-outs if needed.
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# AI assistant artifacts — local session state, histories, and caches.
+# Team-shared rules files (e.g. `.cursorrules`, `.github/copilot-instructions.md`,
+# `.claude/commands/`, AGENTS.md) are intentionally NOT ignored so they
+# can be committed and shared.
+
+# Claude Code — ignore local session memory and transcripts; commit
+# `.claude/commands/`, `.claude/agents/`, `.claude/settings.json`, etc.
+.claude/memory/
+.claude/transcripts/
+.claude/sessions/
+.claude/.cache/
+
+# Aider
+.aider*
+!.aiderignore
+
+# Cursor — local state only; `.cursorrules` and `.cursor/rules/` stay.
+.cursor/.cursorindex
+.cursor-tutor/
+
+# Continue (VS Code)
+.continue/sessions/
+.continue/.cache/
+
+# Codeium / Windsurf / Cody / Cline / Roo — local caches and chat logs.
+.codeium/
+.windsurf/
+.sourcegraph/
+.cline/
+.roo/
+
+# Tabnine
+.tabnine_root_files
+.tabnine_commit_message_history
+
+# Generic AI scratch / draft directories some workflows produce.
+.ai/
+.agent/
+AGENT_NOTES.md
+SCRATCH.md

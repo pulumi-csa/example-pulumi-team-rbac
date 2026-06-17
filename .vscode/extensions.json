@@ -1,0 +1,10 @@
+{
+  // When this workspace is opened, VS Code surfaces these as
+  // recommended installs in the Extensions sidebar. Pairs with the
+  // ruff format-on-save settings in settings.json.
+  "recommendations": [
+    "charliermarsh.ruff",
+    "ms-python.python",
+    "EditorConfig.EditorConfig"
+  ]
+}
