@@ -1,0 +1,28 @@
+repos:
+  # General hygiene — YAML validity, trailing whitespace, EOL newlines,
+  # accidental large files. Latest stable release as of 2026-06.
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-added-large-files
+
+  # Python lint + format via ruff. `ruff` lints (with --fix where safe),
+  # `ruff-format` formats. Both run against any *.py files in the diff.
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.17
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+
+  # Conventional Commits enforcement. Validates the commit message at
+  # the commit-msg stage; run `pre-commit install --hook-type commit-msg`
+  # once to wire it up (in addition to the normal `pre-commit install`).
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v4.16.3
+    hooks:
+      - id: commitizen
+        stages: [commit-msg]
