@@ -164,13 +164,15 @@ needed):
 
 ### Prerequisites
 
-| Tool         | Why                                                                  |
-| ------------ | -------------------------------------------------------------------- |
-| `pulumi`     | The Pulumi CLI — runs the program and manages stack state.          |
-| `python`     | Python ≥ 3.10 — the program's runtime.                              |
-| `poetry`     | Dependency / virtualenv manager for the program.                    |
-| `pre-commit` | Runs lint, format, and commit-message hooks on `git commit`.        |
-| `git`        | Version control.                                                     |
+| Tool         | Why                                                                       |
+| ------------ | ------------------------------------------------------------------------- |
+| `pulumi`     | The Pulumi CLI — runs the program and manages stack state.                |
+| `python`     | Python ≥ 3.10 — the program's runtime.                                    |
+| `poetry`     | Dependency / virtualenv manager for the program.                          |
+| `pre-commit` | Runs lint, format, and commit-message hooks on `git commit`.              |
+| `ruff`       | Python lint + format. Invoked by the pre-commit hooks; useful locally too.|
+| `commitizen` | Conventional Commits validator (and optional `cz commit` for composing).  |
+| `git`        | Version control.                                                          |
 
 VS Code is optional but recommended — the workspace's
 `.vscode/settings.json` enables ruff format-on-save out of the box, and
@@ -180,7 +182,7 @@ EditorConfig extensions.
 ### Install on macOS via Homebrew
 
 ```sh
-brew install pulumi/tap/pulumi python poetry pre-commit git
+brew install pulumi/tap/pulumi python poetry pre-commit ruff commitizen git
 ```
 
 ### Install on other platforms
@@ -189,6 +191,8 @@ brew install pulumi/tap/pulumi python poetry pre-commit git
 - **Python ≥ 3.10**: your package manager or <https://www.python.org/downloads/>
 - **Poetry**: <https://python-poetry.org/docs/#installation>
 - **pre-commit**: `pipx install pre-commit` or <https://pre-commit.com/#install>
+- **ruff**: `pipx install ruff` or <https://docs.astral.sh/ruff/installation/>
+- **commitizen**: `pipx install commitizen` or <https://commitizen-tools.github.io/commitizen/#installation>
 - **git**: your package manager
 
 ### Commit message format
